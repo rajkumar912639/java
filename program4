@@ -1,0 +1,30 @@
+public class MyProgram
+{
+    public static void main(String[] args)
+    {
+         int calories;
+        int fatGrams;
+        int fatCalories;
+
+        System.out.println("Please enter number of calories:");
+        
+        calories = Integer.parseInt(System.console().readLine());
+        
+        System.out.println("Please enter number of fat grams:");
+        
+        fatGrams = Integer.parseInt(System.console().readLine());
+        
+
+        fatCalories = fatGrams * 9;
+
+        if (((float)fatCalories / (float)calories) * 100 > 30) 
+        {
+           
+            System.out.println("This food is not low in fat");
+        } 
+        else 
+        {
+            System.out.println("This food is low in fat");
+ }
+}
+}
