@@ -1,0 +1,31 @@
+public class Assignment4 {
+    int numOfShares;
+    double pricePerShare;
+    double commissionRate;
+
+    public Assignment4(int n, double p, double c) {
+        numOfShares = n;
+        pricePerShare = p;
+        commissionRate = c;
+    }
+
+    public double calcStockPrice() {
+        return numOfShares * pricePerShare;
+    }
+
+    public double calcCommission() {
+        return calcStockPrice() * commissionRate;
+    }
+
+    public double calcTotalPrice() {
+        return calcStockPrice() + calcCommission();
+    }
+
+    public static void main(String[] args) {
+        Assignment4 st = new Assignment4(600, 21.77, 0.02);
+
+        System.out.println("Amount paid for stock: " + st.calcStockPrice());
+        System.out.println("Amount of commission: " + st.calcCommission());
+        System.out.println("Total amount paid: " + st.calcTotalPrice());
+    }
+}
